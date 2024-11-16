@@ -55,3 +55,4 @@
 - Maven
 - IDE (IntelliJ IDEA, Eclipse, etc.)
 
+Debes crear tu bd y colocar tu nombre de usuario y contraseña en el archivo de application.propierties para que funcione.
