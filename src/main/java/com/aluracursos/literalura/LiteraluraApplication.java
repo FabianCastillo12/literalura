@@ -9,14 +9,19 @@ import com.aluracursos.literalura.Principal.AppPrincipal;
 @SpringBootApplication
 public class LiteraluraApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
-		SpringApplication.run(LiteraluraApplication.class, args);
-	}
+    private final AppPrincipal appPrincipal;
 
-	@Override
-	public void run(String... args) throws Exception {
-		AppPrincipal appPrincipal = new AppPrincipal();
-		appPrincipal.mostrarMenu();
-	}
+    public LiteraluraApplication(AppPrincipal appPrincipal) {
+        this.appPrincipal = appPrincipal;
+    }
 
+    public static void main(String[] args) {
+        SpringApplication.run(LiteraluraApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        appPrincipal.mostrarMenu();
+    }
 }
+
